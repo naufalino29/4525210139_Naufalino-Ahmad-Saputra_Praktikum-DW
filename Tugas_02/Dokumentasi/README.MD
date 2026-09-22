@@ -1,4 +1,4 @@
-# Laporan Tugas Praktikum — Halaman Profil Organisasi Kampus
+# Laporan Tugas 02 Praktikum Web Design 
 
 ## 1. Deskripsi Tugas
 Buat halaman profil organisasi kampus dengan minimal dua gambar ber-alt, empat link (termasuk anchor internal,
