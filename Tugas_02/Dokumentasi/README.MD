@@ -21,7 +21,7 @@ awal yang menyusun struktur konten sebelum desain visual dikerjakan.
     └── [akreditasi].jpg
 ```
 
-## 3. Ketentuan Tugas yang Dipenuhi
+## 3. Ketentuan Tugas 
 | Ketentuan | Implementasi |
 |---|---|
 | Minimal 2 gambar ber-`alt` | `<img>` pada bagian *Profil* dan *Why us ?*, masing-masing dengan atribut `alt` deskriptif |
