@@ -6,7 +6,7 @@
 | Nama |Naufalino Ahmad saputra |
 | NPM  |4525210139 |
 |Kelas |A |
-|Prak Desain Web | 
+|Prak |Desain Web | 
 |Pertemuan |05 - Wireframe dan Struktur Informasi |
 
 ## Penjelasan
