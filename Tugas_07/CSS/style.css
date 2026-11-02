@@ -1,0 +1,109 @@
+:root {
+  --bg: #f3f5fb;
+  --card: #ffffff;
+  --primary: #3b5bdb;
+  --primary-dark: #2b44ad;
+  --text: #1f2430;
+  --muted: #6b7280;
+  --danger: #d62839;
+  --ok: #2b9348;
+  --border: #cfd5e3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  background: linear-gradient(160deg, #e8edff 0%, var(--bg) 60%);
+  color: var(--text);
+  padding: 24px 12px;
+}
+
+.card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(30, 40, 90, .12);
+}
+
+header h1 { margin: 0 0 6px; font-size: 1.5rem; color: var(--primary-dark); }
+header p { margin: 0 0 20px; color: var(--muted); }
+
+.req { color: var(--danger); }
+
+.field { margin-bottom: 18px; border: 1.5px solid transparent; border-radius: 8px; padding: 0; min-width: 0; }
+.field > label, legend { display: block; font-weight: 600; margin-bottom: 6px; padding: 0; }
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"],
+select, textarea, input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, .18);
+}
+
+.field > label.opt, label.opt { display: block; font-weight: 400; margin: 6px 0; cursor: pointer; }
+.opt input { margin-right: 8px; }
+
+.hint { display: block; color: var(--muted); font-size: .8rem; margin-top: 4px; }
+
+/* Pesan error disembunyikan; muncul lewat CSS saat input tidak valid
+   setelah pengguna berinteraksi atau mencoba submit (:user-invalid). */
+.error { display: none; color: var(--danger); font-size: .85rem; margin-top: 4px; }
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--danger);
+  background: #fff5f6;
+}
+input:user-invalid ~ .error,
+select:user-invalid ~ .error,
+textarea:user-invalid ~ .error { display: block; }
+
+/* Grup radio & checkbox tunggal */
+fieldset.field:has(:user-invalid) { border-color: var(--danger); background: #fff5f6; padding: 10px 12px; }
+fieldset.field:has(:user-invalid) .error { display: block; }
+.field:has(> .opt > input[type="checkbox"]:user-invalid) .error { display: block; }
+
+/* Tanda hijau saat input sudah benar */
+input:user-valid, select:user-valid, textarea:user-valid { border-color: var(--ok); }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+.btn {
+  padding: 11px 22px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.btn.primary:hover { background: var(--primary-dark); }
+
+.sukses {
+  padding: 16px;
+  border-radius: 10px;
+  background: #e9f8ee;
+  border: 1.5px solid var(--ok);
+  color: #1b5e30;
+}
+.sukses h1 { margin-top: 0; font-size: 1.4rem; }
+
+@media (max-width: 480px) {
+  .card { padding: 18px; }
+  header h1 { font-size: 1.25rem; }
+  .btn { width: 100%; }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrasi Event - Workshop Web Development 2026</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Registrasi Workshop Web Development 2026</h1>
+      <p>Isi formulir berikut untuk mendaftar. Kolom bertanda <span class="req">*</span> wajib diisi.</p>
+    </header>
+
+    <form id="formRegistrasi" action="terima-kasih.html" method="post" enctype="multipart/form-data">
+
+      <div class="field">
+        <label for="nama">Nama Lengkap <span class="req">*</span></label>
+        <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso"
+               required minlength="3" maxlength="50" pattern="[A-Za-z .'\-]{3,50}"
+               title="Nama 3-50 karakter, hanya huruf, spasi, titik, apostrof, atau tanda hubung">
+        <small class="error">Nama 3-50 karakter dan hanya berisi huruf (tanpa angka).</small>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="nama@contoh.com"
+               required pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}"
+               title="Contoh: nama@contoh.com">
+        <small class="error">Format email tidak valid. Contoh: nama@contoh.com</small>
+      </div>
+
+      <div class="field">
+        <label for="telepon">Nomor Telepon <span class="req">*</span></label>
+        <input type="tel" id="telepon" name="telepon" placeholder="08123456789"
+               required inputmode="numeric" pattern="08[0-9]{8,11}"
+               title="Diawali 08, total 10-13 digit, hanya angka">
+        <small class="hint">Masukan hanya angka.</small>
+        <small class="error">Nomor telepon harus hanya angka.</small>
+      </div>
+
+      <div class="field">
+        <label for="tgl_lahir">Tanggal Lahir <span class="req">*</span></label>
+        <input type="date" id="tgl_lahir" name="tgl_lahir" required max="2009-11-02">
+        <small class="hint">Usia minimal 17 tahun.</small>
+        <small class="error">Tanggal lahir wajib diisi dan usia minimal 17 tahun.</small>
+      </div>
+
+      <fieldset class="field">
+        <legend>Jenis Tiket <span class="req">*</span></legend>
+        <label class="opt"><input type="radio" name="tiket" value="reguler" required> Reguler (Rp 100.000)</label>
+        <label class="opt"><input type="radio" name="tiket" value="vip"> VIP (Rp 250.000)</label>
+        <label class="opt"><input type="radio" name="tiket" value="pelajar"> Pelajar (Rp 50.000)</label>
+        <small class="error">Pilih salah satu jenis tiket.</small>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>Topik yang Diminati</legend>
+        <label class="opt"><input type="checkbox" name="minat" value="html-css"> HTML &amp; CSS</label>
+        <label class="opt"><input type="checkbox" name="minat" value="javascript"> JavaScript</label>
+        <label class="opt"><input type="checkbox" name="minat" value="backend"> Backend (PHP/Node)</label>
+        <label class="opt"><input type="checkbox" name="minat" value="uiux"> UI/UX</label>
+        <small class="hint">Boleh pilih lebih dari satu. "Minimal 1 topik".</small>
+      </fieldset>
+
+      <div class="field">
+        <label for="kota">Kota Asal <span class="req">*</span></label>
+        <select id="kota" name="kota" required>
+          <option value="">-- Pilih kota --</option>
+          <option value="jakarta">Jakarta</option>
+          <option value="bandung">Bandung</option>
+          <option value="surabaya">Surabaya</option>
+          <option value="yogyakarta">Yogyakarta</option>
+          <option value="lainnya">Lainnya</option>
+        </select>
+        <small class="error">Pilih kota asal.</small>
+      </div>
+
+      <div class="field">
+        <label for="motivasi">Motivasi Mengikuti Event <span class="req">*</span></label>
+        <textarea id="motivasi" name="motivasi" rows="4" required minlength="20" maxlength="300"
+                  placeholder="Ceritakan alasan Anda (20-300 karakter)"></textarea>
+        <small class="hint">20-300 karakter.</small>
+        <small class="error">Motivasi wajib diisi, minimal 20 karakter.</small>
+      </div>
+
+      <div class="field">
+        <label for="bukti">Upload Bukti Pembayaran <span class="req">*</span></label>
+        <input type="file" id="bukti" name="bukti" accept=".jpg,.jpeg,.png,.pdf" required>
+        <small class="hint">Format JPG, PNG, atau PDF, maksimal 2 MB.</small>
+        <small class="error">Bukti pembayaran wajib diunggah.</small>
+      </div>
+
+      <div class="field">
+        <label class="opt"><input type="checkbox" id="setuju" name="setuju" required> Saya menyetujui syarat &amp; ketentuan event. <span class="req">*</span></label>
+        <small class="error">Anda harus menyetujui syarat &amp; ketentuan.</small>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn primary">Daftar Sekarang</button>
+        <button type="reset" class="btn">Reset</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
