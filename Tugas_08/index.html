@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran Kegiatan</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="form-card">
+        <header class="form-header">
+          <span class="label-top"> PENDAFTARAN KURSUS </span>
+          <h1>Form Pendaftaran kursus HTML </h1>
+          <p>Lengkapi data berikut dengan benar. Field bertanda wajib diisi.</p>
+        </header>
+        <form action="/proses-pendaftaran" method="post">
+          <!-- Nama -->
+          <div class="form-group">
+            <label for="nama"> Nama Lengkap * </label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Contoh: Saipul"
+              minlength="3"
+              maxlength="50"
+              required
+            />
+            <small> Masukkan nama lengkap antara 3-50 karakter </small>
+          </div>
+          <!-- NIM -->
+          <div class="form-group">
+            <label for="nim"> Nomor telepon </label>
+            <input
+              type="text"
+              id="nim"
+              name="nim"
+              placeholder="Contoh: 081234567890"
+              pattern="[0-9]{10,13}"
+              maxlength="12"
+              required
+            />
+            <small> Nomor TLP harus terdiri dari digit angka. </small>
+          </div>
+
+            <div class="form-group">
+            <label for="nim"> Email </label>
+            <input
+              type="text"
+              id="nim"
+              name="nim"
+              placeholder="Contoh: guest12@gmail.com"
+              pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}"
+              maxlength="50"
+              required
+            />
+            <small> Email harus terdiri dari @. </small>
+          </div>
+
+            <div class="form-group">
+            <label for="program-studi"> Jenis Kelamin </label>
+            <select id="program-studi" name="program_studi" required>
+              <option value="">-- Pilih Jenis Kelain --</option>
+              <option value="Laki-Laki">Laki-Laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+
+          <!-- Program Studi -->
+          <div class="form-group">
+            <label for="program-studi"> Domisili </label>
+            <select id="program-studi" name="program_studi" required>
+              <option value="">-- Pilih Domisili / wilayah --</option>
+              <option value="informatika">Jakarta</option>
+              <option value="mesin">Bogor</option>
+              <option value="elektro">Depok </option>
+              <option value="sipil">Bekasi</option>
+              <option value="sipil">Tangerang</option>
+              <option value="sipil">Bandung</option>
+            </select>
+          </div>
+          <!-- Radio Button -->
+          <fieldset>
+            <legend>Sesi yang ingin di ambil *</legend>
+            <div class="option">
+              <input
+                type="radio"
+                id="reguler"
+                name="jenis_peserta"
+                value="reguler"
+                required
+              />
+              <label for="reguler"> <b>Sesi 1</b> (9.00 - 12.00) </label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                id="karyawan"
+                name="jenis_peserta"
+                value="karyawan"
+              />
+              <label for="karyawan"> <b>Sesi 2</b> (13.00 - 15.00) </label>
+            </div>
+            <div class="option">
+              <input type="radio" id="umum" name="jenis_peserta" value="umum" />
+              <label for="umum"> <b>Sesi 3</b> (17.00 - 19.00) </label>
+            </div>
+          </fieldset>
+          <!-- Checkbox -->
+          <fieldset>
+            <legend>Bahasa yang pernah di kuasai</legend>
+            <p class="instruction">Anda boleh memilih lebih dari satu.</p>
+            <div class="option">
+              <input type="checkbox" id="web" name="minat[]" value="web" />
+              <label for="web"> C++ </label>
+            </div>
+            <div class="option">
+              <input type="checkbox" id="ai" name="minat[]" value="ai" />
+              <label for="ai"> Java </label>
+            </div>
+            <div class="option">
+              <input type="checkbox" id="data" name="minat[]" value="data" />
+              <label for="data"> Python </label>
+            </div>
+            <div class="option">
+              <input type="checkbox" id="cyber" name="minat[]" value="cyber" />
+              <label for="cyber">  etc </label>
+            </div>
+            <div class="option">
+              <input type="checkbox" id="cyber" name="minat[]" value="cyber" />
+              <label for="cyber">  Tidak ada </label>
+            </div>
+          </fieldset>
+          <!-- Textarea -->
+          <div class="form-group">
+            <label for="alasan"> Motifasi mengapa ingin mendaftar * </label>
+            <textarea
+              id="alasan"
+              name="alasan"
+              rows="5"
+              minlength="20"
+              maxlength="300"
+              placeholder="Jelaskan alasan Anda mengikuti kegiatan ini..."
+              required
+            ></textarea>
+            <small> Tuliskan antara 20-300 karakter. </small>
+          </div>
+        <div class="field">
+            <label for="bukti">Upload Bukti Pembayaran <span class="req">*</span></label>
+                <input type="file" id="bukti" name="bukti" accept=".jpg,.jpeg,.png,.pdf" required>
+            <small>Format JPG, PNG, atau PDF, maksimal 2 MB.</small>
+      </div>
+          <!-- Persetujuan -->
+          <div class="agreement">
+            <input
+              type="checkbox"
+              id="persetujuan"
+              name="persetujuan"
+              value="setuju"
+              required
+            />
+            <label for="persetujuan">
+              Saya menyatakan data yang diisi sudah benar. *
+            </label>
+          </div>
+          <!-- Tombol -->
+          <div class="button-group">
+            <button type="submit" class="btn btn-primary">
+              Kirim Pendaftaran
+            </button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

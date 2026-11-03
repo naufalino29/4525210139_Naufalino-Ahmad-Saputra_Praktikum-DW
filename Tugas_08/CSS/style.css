@@ -1,0 +1,308 @@
+
+/* =========================
+   RESET CSS
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff, #e0f2fe);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #1e293b;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+.form-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.10);
+}
+
+/* =========================
+   HEADER
+========================= */
+.form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.label-top {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.form-header h1 {
+  font-size: 28px;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+
+.form-header p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label,
+.field label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 9px;
+  color: #334155;
+}
+
+/* =========================
+   INPUT, SELECT, TEXTAREA
+========================= */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background-color: #f8fafc;
+  font-size: 14px;
+  font-family: inherit;
+  color: #334155;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Small Description */
+.form-group small,
+.field small {
+  display: block;
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =========================
+   FIELDSET
+========================= */
+fieldset {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 22px;
+  background-color: #f8fafc;
+}
+
+legend {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e40af;
+  padding: 0 10px;
+}
+
+.instruction {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   RADIO & CHECKBOX
+========================= */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.option input {
+  width: 17px;
+  height: 17px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.option label {
+  font-size: 14px;
+  color: #475569;
+  cursor: pointer;
+}
+
+/* =========================
+   FILE INPUT
+========================= */
+.field {
+  margin-bottom: 25px;
+}
+
+input[type="file"] {
+  cursor: pointer;
+  background-color: #f8fafc;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #dbeafe;
+  border: none;
+  color: #1d4ed8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =========================
+   AGREEMENT
+========================= */
+.agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.agreement input {
+  width: 17px;
+  height: 17px;
+  accent-color: #2563eb;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.agreement label {
+  font-size: 13px;
+  color: #475569;
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+/* Active Button */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .form-card {
+    padding: 25px 18px;
+  }
+
+  .form-header h1 {
+    font-size: 22px;
+  }
+
+  .form-header p {
+    font-size: 13px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
