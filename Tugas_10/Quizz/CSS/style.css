@@ -1,0 +1,226 @@
+
+/* ========================
+   GLOBAL
+======================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #292524;
+}
+
+
+/* ========================
+   NAVBAR
+======================== */
+.custom-navbar {
+  background: #353535;
+  padding: 15px 0;
+}
+
+.custom-navbar .navbar-brand {
+  color: #fbbf24;
+  font-size: 1.3rem;
+}
+
+.custom-navbar .nav-link {
+  color: #f5f5f4;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #fbbf24;
+}
+
+/* ========================
+   HERO
+======================== */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #3c6e71
+  );
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section h1 {
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  line-height: 1.8;
+}
+
+.hero-section img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.custom-badge {
+  background: #c2410c;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+
+/* ========================
+   BUTTON
+======================== */
+.btn-brand {
+  background: #ea580c;
+  color: white;
+  border: 1px solid #ea580c;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+  background: #9a3412;
+  border-color: #9a3412;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-brand {
+  color: #c2410c;
+  border: 2px solid #c2410c;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover {
+  background: #c2410c;
+  color: white;
+}
+
+/* ========================
+   SECTION
+======================== */
+.section-label {
+  color: #ea580c;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+section h2 {
+  color: #292018;
+}
+
+/* ========================
+   TICKET CARD
+======================== */
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ea580c;
+}
+
+.ticket-price {
+  color: #c2410c;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+/* ========================
+   EXPERIENCE CARD
+======================== */
+#fasilitas .card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#fasilitas .card:hover {
+  transform: translateY(-5px);
+}
+
+#fasilitas .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ========================
+   MODAL
+======================== */
+.modal-content {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: #292018;
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+/* ========================
+   FOOTER
+======================== */
+.custom-footer {
+  background: #292018;
+  color: #f5f5f4;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-section img {
+    max-height: 300px;
+  }
+
+  .hero-section .d-flex {
+    align-items: stretch;
+  }
+
+  .custom-navbar .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+}
